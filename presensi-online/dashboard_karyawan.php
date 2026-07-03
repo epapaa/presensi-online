@@ -232,14 +232,14 @@ $jabatan    = $karyawan_data['jabatan'] ?? 'Karyawan';
       <div class="label">Status Kehadiran</div>
       <?php if ($predikat == 'hadir'): ?>
         <div class="nilai">Tepat Waktu</div>
-        <div class="sub">Kamu hadir tepat waktu sebelum jam 09.10 👍</div>
+        <div class="sub">Kamu hadir tepat waktu sebelum jam 09.10</div>
       <?php else: ?>
         <div class="nilai">Terlambat <?= $menit ?> menit</div>
         <div class="sub">Absen diterima sebagai hadir (telat)</div>
       <?php endif; ?>
     </div>
 
-    <div class="notif-time">📅 <?= date('l, d F Y') ?> &nbsp;•&nbsp; ⏰ <?= date('H:i') ?></div>
+    <div class="notif-time"> <?= date('l, d F Y') ?> &nbsp;•&nbsp; <?= date('H:i') ?></div>
     <button class="btn-notif-close <?= $predikat == 'hadir' ? 'sukses' : 'gagal' ?>" onclick="tutupNotif()">
       <?= $predikat == 'hadir' ? 'Lanjutkan →' : 'Oke, Mengerti' ?>
     </button>
@@ -305,9 +305,9 @@ $jabatan    = $karyawan_data['jabatan'] ?? 'Karyawan';
     <?php elseif ($msg == 'sudah_pulang'): ?>
       <div class="alert" style="background:var(--blue-bg);border:1px solid #BFDBFE;color:var(--primary);margin-bottom:20px">ℹ️ Kamu sudah absen pulang hari ini.</div>
     <?php elseif ($msg == 'belum_masuk'): ?>
-      <div class="alert alert-danger" style="margin-bottom:20px">⚠️ Lakukan absen masuk terlebih dahulu.</div>
+      <div class="alert alert-danger" style="margin-bottom:20px">Lakukan absen masuk terlebih dahulu.</div>
     <?php elseif ($msg == 'alpha'): ?>
-      <div class="alert alert-danger" style="margin-bottom:20px">❌ Waktu absen masuk telah berakhir. Status hari ini <b>ALPHA</b>.</div>
+      <div class="alert alert-danger" style="margin-bottom:20px">Waktu absen masuk telah berakhir. Status hari ini <b>ALPHA</b>.</div>
     <?php elseif ($msg == 'belum_waktunya'): ?>
       <div class="alert" style="background:#FFF7ED;border:1px solid #FCD34D;color:#B45309;margin-bottom:20px">⏰ Belum waktunya melakukan absen.</div>
     <?php endif; ?>
@@ -463,7 +463,7 @@ $jabatan    = $karyawan_data['jabatan'] ?? 'Karyawan';
 <!-- MODAL LOGOUT -->
 <div id="logoutModal" class="logout-modal">
   <div class="logout-box">
-    <div class="logout-icon">⚠️</div>
+    <!-- <div class="logout-icon">⚠️</div> -->
     <h2>Konfirmasi Logout</h2>
     <p>Apakah Anda yakin ingin keluar dari sistem presensi?</p>
     <div class="logout-action">
