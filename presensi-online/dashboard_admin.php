@@ -68,7 +68,7 @@ $summary = $stmt3->get_result()->fetch_all(MYSQLI_ASSOC);
 <div class="layout">
   <aside class="sidebar">
     <div class="sidebar-logo">
-      <!-- <div class="logo-icon">📋</div> -->
+      <!-- <div class="logo-icon"></div> -->
       <span>Presensi</span>
     </div>
     <div class="sidebar-label">Menu Admin</div>
@@ -217,10 +217,10 @@ $summary = $stmt3->get_result()->fetch_all(MYSQLI_ASSOC);
                 </td>
                 <td>
                   <?php $p = $r['predikat'] ?? 'alpha'; ?>
-                  <?php if ($p=='hadir'): ?><span class="badge hadir">✅ Hadir</span>
-                  <?php elseif ($p=='telat'): ?><span class="badge telat">⚠️ Telat</span>
-                  <?php elseif ($p=='alpha'): ?><span class="badge alpha">❌ Alpha</span>
-                  <?php else: ?><span class="badge izin">📝 Izin</span>
+                  <?php if ($p=='hadir'): ?><span class="badge hadir">Hadir</span>
+                  <?php elseif ($p=='telat'): ?><span class="badge telat">Telat</span>
+                  <?php elseif ($p=='alpha'): ?><span class="badge alpha">Alpha</span>
+                  <?php else: ?><span class="badge izin">Izin</span>
                   <?php endif; ?>
                 </td>
               </tr>
