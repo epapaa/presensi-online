@@ -94,7 +94,7 @@ $summary = $stmt3->get_result()->fetch_all(MYSQLI_ASSOC);
 
     <!-- STATS -->
     <div class="stats-grid">
-      <div class="stat-card"><div class="label">Total Karyawan</div><div class="value blue"><?= $total_karyawan ?></div></div>
+      <div class="stat-card"><div class="label">Total Karyawan</div><div class="value blue"><?= (int)$total_karyawan ?></div></div>
       <div class="stat-card"><div class="label">Hadir Hari Ini</div><div class="value green"><?= $today_stats['hadir'] ?? 0 ?></div></div>
       <div class="stat-card"><div class="label">Telat Hari Ini</div><div class="value yellow"><?= $today_stats['telat'] ?? 0 ?></div></div>
       <div class="stat-card"><div class="label">Alpha Hari Ini</div><div class="value red"><?= $today_stats['alpha'] ?? 0 ?></div></div>
@@ -203,7 +203,7 @@ $summary = $stmt3->get_result()->fetch_all(MYSQLI_ASSOC);
               <?php foreach ($rekap as $i => $r): ?>
               <tr>
                 <td style="color:var(--muted)"><?= $i+1 ?></td>
-                <td><?= date('d M Y', strtotime($r['tanggal'])) ?></td>
+                <td><?= htmlspecialchars(date('d M Y', strtotime($r['tanggal']))) ?></td>
                 <td>
                   <a href="rekap_karyawan.php?id=<?= $r['karyawan_id'] ?>&bulan=<?= $bulan ?>" style="font-weight:600;color:var(--primary);text-decoration:none"><?= htmlspecialchars($r['nama']) ?></a>
                   <div style="font-size:12px;color:var(--muted)"><?= htmlspecialchars($r['jabatan'] ?? '') ?></div>
