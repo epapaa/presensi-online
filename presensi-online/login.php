@@ -68,7 +68,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <div class="auth-wrap">
   <div class="auth-card">
     <div class="auth-logo">
-      <div class="logo-icon">📋</div>
+      <!-- <div class="logo-icon">📋</div> -->
       <span>Presensi Online</span>
     </div>
 
