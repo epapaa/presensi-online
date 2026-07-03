@@ -251,7 +251,7 @@ $jabatan    = $karyawan_data['jabatan'] ?? 'Karyawan';
 <!-- NOTIF ABSEN PULANG -->
 <div class="notif-overlay show" id="notifOverlay">
   <div class="notif-card">
-    <!-- <div class="notif-icon">🏠</div> -->
+
     <h2>Absen Pulang Berhasil</h2>
     <div class="notif-nama"><?= htmlspecialchars($_SESSION['nama']) ?></div>
     <div class="notif-jabatan"><?= htmlspecialchars($jabatan) ?></div>
@@ -259,7 +259,7 @@ $jabatan    = $karyawan_data['jabatan'] ?? 'Karyawan';
     <div class="notif-status-box sukses">
       <div class="label">Status Kepulangan</div>
       <div class="nilai">Berhasil Dicatat</div>
-      <div class="sub">Selamat beristirahat, sampai besok! 👋</div>
+      <div class="sub">Selamat beristirahat, sampai besok! </div>
     </div>
 
     <div class="notif-time"> <?= date('l, d F Y') ?> &nbsp;•&nbsp; <?= date('H:i') ?></div>
@@ -272,12 +272,12 @@ $jabatan    = $karyawan_data['jabatan'] ?? 'Karyawan';
   <!-- SIDEBAR -->
   <aside class="sidebar">
     <div class="sidebar-logo">
-      <!-- <div class="logo-icon">📋</div> -->
+  
       <span>Presensi</span>
     </div>
     <div class="sidebar-label">Menu</div>
     <a href="dashboard_karyawan.php" class="nav-item active">
-      <!-- <span class="icon">🏠</span> Dashboard -->
+    
     </a>
     <div class="sidebar-footer">
       <div class="user-badge">
@@ -301,15 +301,15 @@ $jabatan    = $karyawan_data['jabatan'] ?? 'Karyawan';
     </div>
 
     <?php if ($msg == 'sudah_masuk'): ?>
-      <div class="alert" style="background:var(--blue-bg);border:1px solid #BFDBFE;color:var(--primary);margin-bottom:20px">ℹ️ Kamu sudah absen masuk hari ini.</div>
+      <div class="alert" style="background:var(--blue-bg);border:1px solid #BFDBFE;color:var(--primary);margin-bottom:20px">Kamu sudah absen masuk hari ini.</div>
     <?php elseif ($msg == 'sudah_pulang'): ?>
-      <div class="alert" style="background:var(--blue-bg);border:1px solid #BFDBFE;color:var(--primary);margin-bottom:20px">ℹ️ Kamu sudah absen pulang hari ini.</div>
+      <div class="alert" style="background:var(--blue-bg);border:1px solid #BFDBFE;color:var(--primary);margin-bottom:20px">Kamu sudah absen pulang hari ini.</div>
     <?php elseif ($msg == 'belum_masuk'): ?>
       <div class="alert alert-danger" style="margin-bottom:20px">Lakukan absen masuk terlebih dahulu.</div>
     <?php elseif ($msg == 'alpha'): ?>
       <div class="alert alert-danger" style="margin-bottom:20px">Waktu absen masuk telah berakhir. Status hari ini <b>ALPHA</b>.</div>
     <?php elseif ($msg == 'belum_waktunya'): ?>
-      <div class="alert" style="background:#FFF7ED;border:1px solid #FCD34D;color:#B45309;margin-bottom:20px">⏰ Belum waktunya melakukan absen.</div>
+      <div class="alert" style="background:#FFF7ED;border:1px solid #FCD34D;color:#B45309;margin-bottom:20px">Belum waktunya melakukan absen.</div>
     <?php endif; ?>
 
     <!-- STATS -->
@@ -463,7 +463,7 @@ $jabatan    = $karyawan_data['jabatan'] ?? 'Karyawan';
 <!-- MODAL LOGOUT -->
 <div id="logoutModal" class="logout-modal">
   <div class="logout-box">
-    <!-- <div class="logout-icon">⚠️</div> -->
+ 
     <h2>Konfirmasi Logout</h2>
     <p>Apakah Anda yakin ingin keluar dari sistem presensi?</p>
     <div class="logout-action">
