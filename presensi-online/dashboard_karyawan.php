@@ -251,7 +251,7 @@ $jabatan    = $karyawan_data['jabatan'] ?? 'Karyawan';
 <!-- NOTIF ABSEN PULANG -->
 <div class="notif-overlay show" id="notifOverlay">
   <div class="notif-card">
-    <div class="notif-icon">🏠</div>
+    <!-- <div class="notif-icon">🏠</div> -->
     <h2>Absen Pulang Berhasil</h2>
     <div class="notif-nama"><?= htmlspecialchars($_SESSION['nama']) ?></div>
     <div class="notif-jabatan"><?= htmlspecialchars($jabatan) ?></div>
@@ -262,7 +262,7 @@ $jabatan    = $karyawan_data['jabatan'] ?? 'Karyawan';
       <div class="sub">Selamat beristirahat, sampai besok! 👋</div>
     </div>
 
-    <div class="notif-time">📅 <?= date('l, d F Y') ?> &nbsp;•&nbsp; ⏰ <?= date('H:i') ?></div>
+    <div class="notif-time"> <?= date('l, d F Y') ?> &nbsp;•&nbsp; <?= date('H:i') ?></div>
     <button class="btn-notif-close sukses" onclick="tutupNotif()">Oke, Sampai Besok!</button>
   </div>
 </div>
