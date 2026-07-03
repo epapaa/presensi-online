@@ -51,12 +51,11 @@ $stats = $stmt3->get_result()->fetch_assoc();
 <div class="layout">
   <aside class="sidebar">
     <div class="sidebar-logo">
-      <div class="logo-icon">📋</div>
       <span>Presensi</span>
     </div>
     <div class="sidebar-label">Menu Admin</div>
-    <a href="dashboard_admin.php" class="nav-item active"><span class="icon">📊</span> Rekap Presensi</a>
-    <a href="kelola_karyawan.php" class="nav-item"><span class="icon">👥</span> Kelola Karyawan</a>
+    <a href="dashboard_admin.php" class="nav-item active"><span class="icon"></span> Rekap Presensi</a>
+    <a href="kelola_karyawan.php" class="nav-item"><span class="icon"></span> Kelola Karyawan</a>
     <div class="sidebar-footer">
       <div class="user-badge">
         <div class="avatar"><?= strtoupper(substr($_SESSION['nama'],0,1)) ?></div>
@@ -71,7 +70,7 @@ $stats = $stmt3->get_result()->fetch_assoc();
 
   <main class="main">
     <div style="margin-bottom:20px">
-      <a href="dashboard_admin.php" style="font-size:13px;color:var(--muted);text-decoration:none">← Kembali ke Rekap</a>
+      <a href="dashboard_admin.php" style="font-size:13px;color:var(--muted);text-decoration:none">Kembali ke Rekap</a>
     </div>
 
     <!-- PROFILE KARYAWAN -->
@@ -149,10 +148,10 @@ $stats = $stmt3->get_result()->fetch_assoc();
                 </td>
                 <td>
                   <?php $p = $r['predikat'] ?? 'alpha'; ?>
-                  <?php if ($p=='hadir'): ?><span class="badge hadir">✅ Hadir</span>
-                  <?php elseif ($p=='telat'): ?><span class="badge telat">⚠️ Telat</span>
-                  <?php elseif ($p=='alpha'): ?><span class="badge alpha">❌ Alpha</span>
-                  <?php else: ?><span class="badge izin">📝 Izin</span>
+                  <?php if ($p=='hadir'): ?><span class="badge hadir">Hadir</span>
+                  <?php elseif ($p=='telat'): ?><span class="badge telat">Telat</span>
+                  <?php elseif ($p=='alpha'): ?><span class="badge alpha">Alpha</span>
+                  <?php else: ?><span class="badge izin">Izin</span>
                   <?php endif; ?>
                 </td>
               </tr>
