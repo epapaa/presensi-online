@@ -51,15 +51,15 @@ $karyawan_list = $conn->query("SELECT * FROM karyawan ORDER BY nama")->fetch_all
 <div class="layout">
   <aside class="sidebar">
     <div class="sidebar-logo">
-      <div class="logo-icon">📋</div>
+      <div class="logo-icon"></div>
       <span>Presensi</span>
     </div>
     <div class="sidebar-label">Menu Admin</div>
     <a href="dashboard_admin.php" class="nav-item">
-      <span class="icon">📊</span> Rekap Presensi
+      Rekap Presensi
     </a>
     <a href="kelola_karyawan.php" class="nav-item active">
-      <span class="icon">👥</span> Kelola Karyawan
+      Kelola Karyawan
     </a>
     <div class="sidebar-footer">
       <div class="user-badge">
@@ -80,11 +80,11 @@ $karyawan_list = $conn->query("SELECT * FROM karyawan ORDER BY nama")->fetch_all
     </div>
 
     <?php if ($msg == 'sukses'): ?>
-      <div class="alert alert-success" style="margin-bottom:20px">✅ Karyawan berhasil ditambahkan.</div>
+      <div class="alert alert-success" style="margin-bottom:20px">Karyawan berhasil ditambahkan.</div>
     <?php elseif ($msg == 'hapus'): ?>
-      <div class="alert alert-success" style="margin-bottom:20px">✅ Karyawan berhasil dihapus.</div>
+      <div class="alert alert-success" style="margin-bottom:20px">Karyawan berhasil dihapus.</div>
     <?php elseif ($msg == 'error'): ?>
-      <div class="alert alert-danger" style="margin-bottom:20px">❌ Gagal. Username mungkin sudah dipakai.</div>
+      <div class="alert alert-danger" style="margin-bottom:20px">Gagal. Username mungkin sudah dipakai.</div>
     <?php endif; ?>
 
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:start">
