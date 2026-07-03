@@ -17,8 +17,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['action'])) {
         $password = password_hash(trim($_POST['password']), PASSWORD_DEFAULT);
 
         if (empty($nama) || empty($username) || empty($jabatan)) {
-            $error = "Semua field harus diisi.";
-        }
+            $msg = 'error';
+        } else {
         
         $stmt = $conn->prepare("INSERT INTO karyawan (nama, username, password, jabatan) VALUES (?,?,?,?)");
         $stmt->bind_param("ssss", $nama, $username, $password, $jabatan);
@@ -27,8 +27,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['action'])) {
         } else {
             $msg = 'error';
         }
+    } 
     }
-
     if ($_POST['action'] == 'hapus') {
         $id = (int)$_POST['id'];
         $conn->prepare("DELETE FROM karyawan WHERE id = ?")->execute() || true;
