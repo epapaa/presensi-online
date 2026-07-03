@@ -11,11 +11,15 @@ $msg = '';
 // Tambah karyawan
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['action'])) {
     if ($_POST['action'] == 'tambah') {
-        $nama     = trim($_POST['nama']);
-        $username = trim($_POST['username']);
-        $jabatan  = trim($_POST['jabatan']);
+        $nama     = trim(htmlspecialchars($_POST['nama'] ?? ''));
+        $username = trim(htmlspecialchars($_POST['username'] ?? ''));
+        $jabatan  = trim(htmlspecialchars($_POST['jabatan'] ?? '');
         $password = password_hash(trim($_POST['password']), PASSWORD_DEFAULT);
 
+        if (empty($nama) || empty($username) || empty($jabatan)) {
+            $error = "Semua field harus diisi.";
+        }
+        
         $stmt = $conn->prepare("INSERT INTO karyawan (nama, username, password, jabatan) VALUES (?,?,?,?)");
         $stmt->bind_param("ssss", $nama, $username, $password, $jabatan);
         if ($stmt->execute()) {
