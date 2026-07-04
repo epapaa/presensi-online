@@ -31,7 +31,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['action'])) {
     }
     if ($_POST['action'] == 'hapus') {
         $id = (int)$_POST['id'];
-        $conn->prepare("DELETE FROM karyawan WHERE id = ?")->execute() || true;
         $stmt = $conn->prepare("DELETE FROM karyawan WHERE id = ?");
         $stmt->bind_param("i", $id);
         $stmt->execute();
